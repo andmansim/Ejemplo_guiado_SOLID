@@ -49,3 +49,33 @@ Para concluir, debes demostrar cómo crearías las instancias de las dependencia
 clases que las necesitan. Asegúrate de que tu implementación sea robusta, fácil de entender y fácil de mantener.
 
 '''
+#hacer prurbas con test y doctest --> ejemplo gestor clientes
+
+class DataBaseManager:
+    def __init__(self, connection_string):
+        self.connection_string = connection_string
+
+class Authenticator:
+    def __init__(self, user_database):
+        self.user_database = user_database
+
+class PaymentProcessor:
+    def __init__(self, api_key):
+        self.api_key = api_key
+
+class OrderManager:
+    def __init__(self, database_manager, authenticator, payment_processor): #Estas deoendencias deberían de estar en otro lado y aquí se lo pasas después
+        self.database_manager = database_manager
+        self.authenticator = authenticator
+        self.payment_processor = payment_processor
+#Ahora, en lugar de crear las instancias de las dependencias dentro de la OrderManager, 
+#puedes crearlas en algún lugar centralizado y pasarlas como argumentos al constructor de la OrderManager.
+
+
+# Crear instancias de nuestras dependencias
+database_manager = DataBaseManager("my-database-connection-string")
+authenticator = Authenticator(database_manager)
+payment_processor = PaymentProcessor("my-payment-api-key")
+
+# Crear una instancia de OrderManager, pasando nuestras dependencias
+order_manager = OrderManager(database_manager, authenticator, payment_processor)
