@@ -7,7 +7,7 @@ transpuesta de la matriz. Asegúrate de que cada método tenga una única respon
 
 '''
 class Matriz:
-    def __init__(self, elementos):
+    def __init__(self, elementos): #crea matriz en listas de listas
         self.elementos = elementos
 
     #Esto de abajo en otra clase hereda de matriz
@@ -24,4 +24,7 @@ elementos son la lista de listas
 class ej: matriz --> estructura
 otras clases son las que hacen las cosas (MVC)
 Este código no cumple el método SOLID
+Si queremos meter otra función se hace en otra clase (otro to do) no tocamos el código que ya está hecho. 
+Hacemos otra clase y heredamos :)
+En el main hay q definir la matriz, imprimir y que cumpla SOLID
 '''
