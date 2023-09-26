@@ -7,4 +7,6 @@ Después nos vamos a nuestro repo y creamos una carpeta nombre: PlantUML. Añadi
 #No va --> lo subimos como imagen. 
 
 Montar un googlecolaps con gpu con .....
-Hacer el diagrama uml con el chaty y comprobarlo. Tras tener todo el código y que vaya
+Hacer el diagrama uml con el chaty y comprobarlo. Tras tener todo el código y que vaya. Guardar el uml como .svg (vector gráfico que se adapta a todo)
+PRINCIPIOS_GENERALES_Y_SOLID--> buscar repo
+para ver el preview es control + d

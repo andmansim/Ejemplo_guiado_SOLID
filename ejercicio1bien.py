@@ -4,10 +4,10 @@ class Matriz():
     
 
 class Traspuesta(Matriz):
-    def __init__(self, elementos):
-        super().__init__(elementos)
+    def __init__(self, matriz):
+        self.matriz = matriz
     def traspuesta(self):
-        return Matriz([[fila[i] for fila in self.elementos] for i in range (len(self.elementos[0]))])#enlazar bucles for para elementos pequeños sí (15, 20 datos), para grandes hacerlo de manera (miles datos) recuersiva
+        return Matriz([[fila[i] for fila in self.matriz.elementos] for i in range (len(self.matriz.elementos[0]))])#enlazar bucles for para elementos pequeños sí (15, 20 datos), para grandes hacerlo de manera (miles datos) recuersiva
     #función lamnda para que la borre una vez hecha y así optimizamos el código --> lo ha hecho chatGpt
 
 class Imprimir(Matriz):
@@ -46,9 +46,9 @@ class Lanzador(Imprimir, Traspuesta):
     
     def lanzar(self): #vista
         print('La matriz es:')
-        self.imprimir().imprimir()
+        self.imprimir.imprimir()
         print('La traspuesta es:')
-        traspuesta_resultado = self.traspuesta().calcular_traspuesta()
+        traspuesta_resultado = self.traspuesta.traspuesta()
         imp_tras = Imprimir(traspuesta_resultado)
         imp_tras.imprimir()
         
