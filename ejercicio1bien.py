@@ -25,11 +25,23 @@ t = Traspuesta(m.elementos)
 print(t.traspuesta().elementos)
 
 class Lanzador(Imprimir, Traspuesta):
-    def __init__(self, elementos):
-        super().__init__(elementos)
+    #Creame funciones que me llame a la función traspuesta y la función imprimir y que me lo recoja con un imput de los elementos de la matriz
+    def __init__(self):
+        self.elementos = []
+        self.cantidad_filas = int(input('increse filas'))
+        self.cantidad_columnas = int(input('increse columnas'))
+        self.crear_matriz()
+        super().__init__(self.elementos)
     
+    def crear_matriz(self):
+        for i in range(self.cantidad_filas):
+            fila =[]
+            for j in range(self.cantidad_columnas):
+                fila.append(int(input(f'Ingrese elemento {i+1}, {j+1}?')))
+            self.elementos.append(fila)
     def lanzar(self):
         self.imprimir()
-        print(self.traspuesta().elementos)
+        print('La traspuesta es:')
+        self.traspuesta().imprimir()
+        
 
-class Main
