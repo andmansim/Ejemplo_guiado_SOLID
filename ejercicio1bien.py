@@ -45,3 +45,10 @@ class Lanzador(Imprimir, Traspuesta):
         self.traspuesta().imprimir()
         
 
+class Main():
+    def __init__(self) -> None:
+        self.lanzador = Lanzador()
+        self.lanzador.lanzar()
+
+if __name__ == "__main__":
+    Main()    
