@@ -16,4 +16,20 @@ class Imprimir(Matriz):
         for fila in self.elementos:
             print(fila)
 
-m = Imprimir
+
+#Todo esto tiene que ir en una clase lanzador, hay que pedirselo al chat para que te lo haga bien. TODO LO HACE EL CHAT
+m = Imprimir([[1,2], [3,4]])
+m.imprimir()
+
+t = Traspuesta(m.elementos)
+print(t.traspuesta().elementos)
+
+class Lanzador(Imprimir, Traspuesta):
+    def __init__(self, elementos):
+        super().__init__(elementos)
+    
+    def lanzar(self):
+        self.imprimir()
+        print(self.traspuesta().elementos)
+
+class Main
