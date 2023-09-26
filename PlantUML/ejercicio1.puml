@@ -1,0 +1,9 @@
+@startuml
+class Matriz(
+    - elementos: List[List[int]]
+    --
+    + __init__(elementos: List[List[int]])
+    + imprimir(): void
+    + transpuesta(): Matriz
+)
+@enduml
