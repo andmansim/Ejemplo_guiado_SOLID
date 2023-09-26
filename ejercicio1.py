@@ -8,7 +8,7 @@ de listas, la impresión de la matriz en una forma legible, y el cálculo de la
 transpuesta de la matriz. Asegúrate de que cada método tenga una única responsabilidad.
 
 '''
-class Matriz:
+class Matriz: #API, Interface
     def __init__(self, elementos): #crea matriz en listas de listas
         self.elementos = elementos
 
