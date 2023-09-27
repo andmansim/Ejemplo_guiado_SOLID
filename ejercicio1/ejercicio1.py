@@ -31,3 +31,11 @@ Hacemos otra clase y heredamos :)
 En el main hay q definir la matriz, imprimir y que cumpla SOLID
 Otra clase que se encarga de controlar y mandar cosas a la clase matriz (hereda de las otras), es decir un lanzador
 '''
+#una función que me devuelva la suma de dos matrices
+function suma(matriz1, matriz2):
+    if len(matriz1) == len(matriz2) and len(matriz1[0]) == len(matriz2[0]):
+        return [[matriz1[i][j] + matriz2[i][j] for j in range(len(matriz1[0]))] for i in range(len(matriz1))]
+    else:
+        return None
+    
+
