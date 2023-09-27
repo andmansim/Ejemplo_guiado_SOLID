@@ -52,7 +52,7 @@ class Lanzador(Imprimir, Traspuesta):
         imp_tras = Imprimir(traspuesta_resultado)
         imp_tras.imprimir()
         
-        
+
 #Podemos poner un errar en el chat + el código       
 
 if __name__ == "__main__":
