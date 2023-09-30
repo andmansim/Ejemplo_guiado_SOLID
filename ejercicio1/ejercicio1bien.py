@@ -1,17 +1,17 @@
 class Matriz():
-    def __init__(self, elementos):
+    def __init__(self, elementos: list):
         self.elementos= elementos
     
 
 class Traspuesta(Matriz):
-    def __init__(self, matriz):
+    def __init__(self, matriz:Matriz):
         self.matriz = matriz
-    def traspuesta(self):
+    def calcular_traspuesta(self):
         return Matriz([[fila[i] for fila in self.matriz.elementos] for i in range (len(self.matriz.elementos[0]))])#enlazar bucles for para elementos pequeños sí (15, 20 datos), para grandes hacerlo de manera (miles datos) recuersiva
     #función lamnda para que la borre una vez hecha y así optimizamos el código --> lo ha hecho chatGpt
 
 class Imprimir(Matriz):
-    def __init__(self, matriz):
+    def __init__(self, matriz: Matriz):
         self.matriz = matriz
     def imprimir(self):
         for fila in self.matriz.elementos:
@@ -25,7 +25,7 @@ m.imprimir()
 t = Traspuesta(m.elementos)
 print(t.traspuesta().elementos)
 '''
-class Lanzador(Imprimir, Traspuesta):
+class Lanzador:
     #Creame funciones que me llame a la función traspuesta y la función imprimir y que me lo recoja con un imput de los elementos de la matriz
     def __init__(self):
         self.elementos = []
@@ -48,12 +48,12 @@ class Lanzador(Imprimir, Traspuesta):
         print('La matriz es:')
         self.imprimir.imprimir()
         print('La traspuesta es:')
-        traspuesta_resultado = self.traspuesta.traspuesta()
+        traspuesta_resultado = self.traspuesta.calcular_traspuesta()
         imp_tras = Imprimir(traspuesta_resultado)
         imp_tras.imprimir()
         
 
-#Podemos poner un errar en el chat + el código       
+#Podemos poner un error en el chat + el código       
 
 if __name__ == "__main__":
     lanzador = Lanzador()
