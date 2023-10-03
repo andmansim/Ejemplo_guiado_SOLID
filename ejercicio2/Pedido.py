@@ -10,3 +10,7 @@ class Pedido:
 
     def __str__(self):
         return f"Pedido: {self.id} - Cliente: {self.cliente} - Productos: {self.productos}"
+
+
+if __name__ == "__main__":
+    pass

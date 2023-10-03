@@ -22,3 +22,8 @@ class Usuario:
             "dinero": self.dinero,
             "direccion": self.direccion
         }
+        
+
+
+if __name__ == "__main__":
+    pass
