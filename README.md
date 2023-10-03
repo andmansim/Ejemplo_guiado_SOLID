@@ -12,3 +12,4 @@ PRINCIPIOS_GENERALES_Y_SOLID--> buscar repo
 para ver el preview es control + d
 
 El ejercicio 2 en otra carpeta
+DatabaseManager --> dni, apellido y dinero
