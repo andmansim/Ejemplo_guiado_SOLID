@@ -1,6 +1,5 @@
 class Pedido:
-    def __init__(self, id, cliente, tipo_pizza, ingredientes, precio, fecha, estado):
-        self.id = id
+    def __init__(self, cliente, tipo_pizza, ingredientes, precio, fecha, estado):
         self.cliente = cliente
         self.tipo_pizza = tipo_pizza
         self.ingredientes = ingredientes
