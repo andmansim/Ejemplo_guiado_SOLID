@@ -1,1 +1,3 @@
-#Crea una clase responsable de manejar la conexión con la base de datos y realizar operaciones CRUD. 
+#controlador de los clientes y pedidos mediante hilos
+class DataBaseManager:
+    
