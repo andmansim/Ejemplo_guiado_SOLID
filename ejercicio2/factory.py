@@ -51,21 +51,23 @@ class ConcreteCreator2(Creator):
         return ConcreteProduct2()
 
 '''
-Producto: tamaño, ingredientes, precio, estado_producto, alergias, cliente (dependerá si lo ponemos en cliente o en producto)
+Producto: id, tamaño, ingredientes, precio, estado_producto, alergias, cliente (dependerá si lo ponemos en cliente o en producto)
 '''
 class Product(ABC):
     '''
     Declaramos la operación general de todos los productos
     '''
-    def __init__(self, tamanio, ingredientes, precio, estado_producto, alergias):
+    def __init__(self, id, tamanio, ingredientes, precio, estado_producto, alergias, cliente):
         self.tamanio = tamanio
         self.ingredientes = ingredientes
         self.precio = precio
         self.estado_producto = estado_producto
         self.alergias = alergias
+        self.cliente = cliente
+        self.id = id
    
     @abstractmethod
-    def operation(self) -> str:
+    def pedido(self) -> str:
         pass
 
 
