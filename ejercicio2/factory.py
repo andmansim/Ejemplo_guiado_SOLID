@@ -73,12 +73,12 @@ Casos concretos de los productos
 '''
 
 class ConcreteProduct1(Product):
-    def operation(self) -> str:
+    def pedido(self) -> str:
         return f'Producto: {self.id}, Precio: {self.precio}, Estado: {self.estado_producto}, Cliente: {self.cliente}, Tamaño: {self.tamanio}, Ingredientes: {self.ingredientes}, Alergia: {self.alergias},  '
 
 #De momento no creo que haga falta hacer otro caso
 class ConcreteProduct2(Product):
-    def operation(self) -> str:
+    def pedido(self) -> str:
         return "{Result of the ConcreteProduct2}"
 
 
@@ -87,16 +87,16 @@ Cliente:nombre, apellido, DNI o gmail, contraseña, pedido, estado_pago, direci�
 '''
 def client_code(creator: Creator) -> None:
     '''
-    Funciona con una instancia concreta de creador. El código del cliente debería funcionar con cualquier subclase de creador.
+    Nos muestra el pedido del cliente
     '''
-    print(f"Client: I'm not aware of the creator's class, but it still works.\n"
+    print(f"Pedido Cliente.\n"
           f"{creator.some_operation()}", end="")
 
 
 if __name__ == "__main__":
-    print("App: Launched with the ConcreteCreator1.")
+    print("Cliente1: Con caso concreto1")
     client_code(ConcreteCreator1())
     print("\n")
 
-    print("App: Launched with the ConcreteCreator2.")
+    print("Cliente2: Con caso concreto2")
     client_code(ConcreteCreator2())
