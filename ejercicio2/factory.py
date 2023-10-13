@@ -15,19 +15,15 @@ class Creator(ABC):
         '''
         pass
 
-    def some_operation(self) -> str: #el -> str es para indicar que el metodo retorna un string y hace de funión lambda para ahorrar tiempo
+    def some_operation(self) -> str:
         '''
-        Este contiene la lógica del código que depende de un objeto producto retornado por el método 
-        factory.
-        Las subclases pueden cambiar indirectamente esa lógica al sobreescribir el método factory y 
-        retornar un tipo diferente de producto.
+        Crea el objeto producto y lo usa
         '''
-    
         #llamamos al metodo factory_method para que nos cree el objeto producto
         product = self.factory_method()
 
         #usamos el producto
-        result = f"Creator: The same creator's code has just worked with {product.operation()}"
+        result = f"Creator:{product.pedido()}"
 
         return result
 
