@@ -80,7 +80,7 @@ class ConcreteProduct1(Product):
     def operation(self) -> str:
         return f'Producto: {self.id}, Precio: {self.precio}, Estado: {self.estado_producto}, Cliente: {self.cliente}, Tamaño: {self.tamanio}, Ingredientes: {self.ingredientes}, Alergia: {self.alergias},  '
 
-
+#De momento no creo que haga falta hacer otro caso
 class ConcreteProduct2(Product):
     def operation(self) -> str:
         return "{Result of the ConcreteProduct2}"
