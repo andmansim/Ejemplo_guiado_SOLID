@@ -78,7 +78,7 @@ Casos concretos de los productos
 
 class ConcreteProduct1(Product):
     def operation(self) -> str:
-        return "{Result of the ConcreteProduct1}"
+        return f'Producto: {self.id}, Precio: {self.precio}, Estado: {self.estado_producto}, Cliente: {self.cliente}, Tamaño: {self.tamanio}, Ingredientes: {self.ingredientes}, Alergia: {self.alergias},  '
 
 
 class ConcreteProduct2(Product):
